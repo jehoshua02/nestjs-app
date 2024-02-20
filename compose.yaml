@@ -1,0 +1,11 @@
+services:
+  nestjs:
+    image: "my-nestjs-app:latest"
+    build:
+      context: ./nestjs-app
+      target: development
+      # target: production
+    volumes:
+      - ./nestjs-app:/app
+    ports:
+      - "8111:3000"
