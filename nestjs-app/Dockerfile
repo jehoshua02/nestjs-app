@@ -3,7 +3,7 @@ WORKDIR /app
 COPY --chown=node:node package*.json ./
 RUN npm ci --include=dev
 COPY --chown=node:node . .
-CMD [ "npm", "run", "start", "--", "-b", "swc" ]
+CMD [ "npm", "run", "start:dev", "--", "-b", "swc" ]
 EXPOSE 3000
 
 
